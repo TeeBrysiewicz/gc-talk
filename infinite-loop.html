@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		document.write("Creating a function in a for loop.");
+		    function LeakMemory(param){
+		        // for(i = 0; i < 100000; i++){
+		        //        var tagName = document.createElement("div");
+		        //        tagName.setAttribute("onclick", "foo()");
+		        // }
+
+		        objArray = [];
+
+		        while (param){
+		        	var obj = {
+		        		foo: "bar"
+		        	};
+		        	objArray.push(obj);
+		        	console.log(objArray);
+		        }
+
+		    }
+		</script>
+	</head>
+	<body>
+
+	<input type="button"
+	       value="Memory Leaking Insert" onclick="LeakMemory(true)" />
+
+	<input type="button"
+	       value="Memory Leaking Insert" onclick="LeakMemory(false)" />
+
+	</body>
+</html>
