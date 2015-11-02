@@ -166,7 +166,7 @@
 
 						```
 						    function LeakMemory(){
-						        for(i = 0; i < 5000; i++){
+						        for(i = 0; i < 100000; i++){
 						               var tagName = document.createElement("div");
 						               tagName.setAttribute("onclick", "foo()");
 						        }
@@ -179,20 +179,21 @@
 
 				<section>
 					<h2>Screencast Agenda</h2>
-					<ul>
+					<ol>
 						<li>Open Dev Tools (Chrome Extension)</li>
-						<li>Timeline: Single Memory Leak</li>
-						<li>Timeline: Lots of Memory Leaks!</li>
+						<li>Timeline: Lots of Memory Leaks</li>
 						<li>Profiles: Snapshot with No Memory Leak</li>
 						<li>Profiles: Snapshot with Memory Leak</li>
 						<li>Profiles: Comparing Snapshots</li>
-					</ul>
+						<li>Task Manager: View JS Memory Usage</li>
+
+					</ol>
 				</section>
 
 
 				<section>
 				  <video controls autoplay>
-				    <source data-src="lib/video/GC-talk-1.mp4" type="video/mp4" />
+				    <source data-src="lib/video/gc-talk-2.mp4" type="video/mp4" />
 				  </video>
 				</section>
 
