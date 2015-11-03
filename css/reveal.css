@@ -1329,3 +1329,9 @@ html:-moz-full-screen-ancestor {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/**********************************
+* MINE
+**********************************/
+.mine {
+  font-size: 30px; }
