@@ -85,8 +85,7 @@
 						<h2>Example One</h2>
 					<pre style="font-size: 36px;"><code>
 var another = null;
-function test()
-{
+function test() {
     var str = 'A string I am';
     another = str;
 }
@@ -145,10 +144,10 @@ s = null;
 
 						<pre style="font-size: 19px;"><code>
 var obj;
-function LeakMemory(){
-	obj=document.getElementById("DivElement");
-	document.getElementById("DivElement").expandoProperty=obj;
-	obj.bigString=new Array(1000).join(new Array(2000).join("XXXXX"));
+var leakMemory = function() {
+	obj = document.getElementById("DivElement");
+	obj.expandoProperty = obj;
+	obj.bigString = new Array(1000).join(new Array(2000).join("XXXXX"));
 };
 						</code></pre>
 					</script>
